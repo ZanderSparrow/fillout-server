@@ -2,7 +2,7 @@ require('dotenv').config()
 const express = require('express')
 const axios = require('axios')
 const app = express()
-const port = 3003
+const port = process.env.PROD ? 80 : 3003
 
 async function getFormData(url = "") {
   const config = {
